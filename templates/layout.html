@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/output.css') }}">
+        <!-- Tambahkan script JavaScript di sini -->
+        <script>
+            // Contoh fungsi JavaScript
+            function scrollKeKontak() {
+                document.getElementById('colab').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        </script>
+    {% block head%}
+    {% endblock%}
+</head>
+<body>
+    {% block body %}
+    {% endblock%} 
+</body>
+</html>

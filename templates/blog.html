@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block head %}
+<title> Halaman Bosss</title>
+{% endblock %}
+
+{% block body %}
+{% include 'navbar.html' %}
+<section class="bg-white">
+  <div class="grid max-w-screen-xl mx-auto lg:grid-cols-12 py-32">
+      <div class="lg:col-span-2 pt-8">
+          <h1 class="text-black text-xl">Our Course</h1>
+      </div>
+      <div class="lg:col-span-10">
+          <div class="grid max-w-screen-lg justify-center px-4 sm:grid-cols-2 sm:gap-4 sm:px-8 md:grid-cols-3">
+              {% for row in data %}
+              <div class="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+                <img src="{{ row['image_url'] }}" alt="" class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
+                <div class="flex flex-col justify-between p-6 space-y-8">
+                  <div class="space-y-2">
+                    <h2 class="text-3xl font-semibold tracking-tighter">{{ row['field1'] }}</h2>
+                    <p class="dark:text-gray-100">{{ truncate_description(row['field2'], 20) }}</p>
+                  </div>
+                  <a href="{{ url_for('blogdetail', id=row['id']) }}" class="font-medium text-green-600 dark:text-green-500-500 hover:underline">Detail</a>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+      </div>
+  </div>
+</section>
+{% include 'colab.html' %}
+{% include 'footer.html' %}
+{% endblock %}

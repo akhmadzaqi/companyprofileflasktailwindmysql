@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% block head %}
+<title> Halaman Bosss</title>
+{% endblock %}
+
+{% block body %}
+{% include 'navbar.html' %}
+<section class="bg-white">
+    <div class="grid max-w-screen-xl mx-auto lg:grid-cols-12 py-40 pb-28">
+        <div class="lg:col-span-1 pt-8">
+            <h1 class="text-black text-xl pl-3 font-bold">About Us</h1>
+        </div>
+        <div class="lg:col-span-11">
+            <div class="justify-center flex-1 max-w-6xl py-4 mx-auto md:px-6">
+                <div class="flex flex-wrap">
+                    <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
+                        <img src="/static/images/herozaqi.jpg" alt=""
+                            class="relative z-40 object-cover w-full h-96 rounded-3xl">
+                    </div>
+                    <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0 ">
+                        <h2 class="text-4xl font-semibold text-gray-900">
+                            I'am Jeck,
+                        </h2>
+                        <h2 class="mb-4 text-4xl font-semibold text-gray-900">
+                            Bisa Panggil Zaqi KoK👉🏻👈🏻
+                        </h2>
+                        <p class="mb-8 text-base leading-8 text-justify text-gray-500">
+                            As an Informatic student, I bring a diverse skill set to the table, with a particular focus on video editing and 
+                            photography. My academic background in IT provides a strong foundation for understanding technology, while my 
+                            proficiency in video editing and photography showcases my creative and technical abilities. Eager to contribute
+                             my skills to dynamic projects and continue evolving in the ever-changing landscape of IT.
+                        </p>
+                        <a href="#" class="text-white bg-black hover:bg-[#1F1F39] focus:ring-4 focus:outline-none focus:ring-white-300 font-medium text-sm px-5 py-3 text-center">
+                            DISCOVER MORE
+                        </a> 
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+{% include 'colab.html' %}
+{% include 'footer.html' %}
+{% endblock %}
